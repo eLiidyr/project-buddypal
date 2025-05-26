@@ -5,7 +5,7 @@ _addon.version    = '5.20250125.000'
 _addon.command    = '/'
 _addon.userkey    = ''
 
-local build = {development=false, api=assert(package.loadlib(string.format("%buddypal.dll", windower.addon_path):gsub('\\', '/'), "luaopen_Buddypal"))()}
+local build = {development=false, api=assert(package.loadlib(string.format("%sbuddypal.dll", windower.addon_path):gsub('\\', '/'), "luaopen_Buddypal"))()}
 local install = build.api.install(build.development)
 
 if install and type(install) == 'function' then
